@@ -6,9 +6,17 @@ function User() {
     const [Loading, setLoading] = useState(true)
     const [user,setUser] = useState({})
 
+    // useEffect(() => {
+    //     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    //     .then(res => setUser(res.data.json()))
+    //     .finally(setLoading(false))
+
+    // },[id])
+
     useEffect(() => {
-        axios(`https://jsonplaceholder.typicode.com/users/${id}`)
-        .then(res => setUser(res.data))
+        fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+        .then(res => res.json())
+        .then(data => setUser(data))
         .finally(setLoading(false))
 
     },[id])

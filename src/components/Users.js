@@ -8,8 +8,9 @@ function Users() {
     const [users,setUsers] = useState([])
 
     useEffect(() => {
-        axios(`https://jsonplaceholder.typicode.com/users`)
-        .then(res => setUsers(res.data))
+        fetch(`https://jsonplaceholder.typicode.com/users`)
+        .then(res => res.json())
+        .then(data => setUsers(data))
         .finally(setIsLoading(false))
     },[])
 
