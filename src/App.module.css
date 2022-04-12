@@ -14,12 +14,12 @@
     flex-direction: row;
     margin-left:100px;
 }
-.list{
+.nav > li{
     list-style: none;
     margin-right: 30px;
 }
 
-.link{
+.nav > li > a{
     color:blue;
     font-size: 1.2rem;
     text-decoration: none;

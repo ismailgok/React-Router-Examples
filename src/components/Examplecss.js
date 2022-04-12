@@ -1,4 +1,3 @@
-
 import style from "./ExampleCss.module.css";
 
 const Example = () => {
