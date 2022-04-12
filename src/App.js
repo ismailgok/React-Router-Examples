@@ -4,20 +4,25 @@ import Home from "./components/Home"
 import User from "./components/User"
 import Users from "./components/Users"
 import Example from "./components/Examplecss";
+import style from "./App.module.css"
 
 function App() {
 
   return (
-    <div className="App">
-      <li>
-      <Link to="/">Home</Link>
+    <div className={style.container}>
+      <div className={style.nav}>
+        
+      <li className={style.list}>
+      <Link to="/" className={style.link}>Home</Link>
       </li>
-      <li>
-      <Link to="/Users">Users</Link>
+      <li className={style.list}>
+      <Link to="/Users" className={style.link}>Users</Link>
       </li>
-      <li>
-        <Link to="/example">ModuleCss Example</Link>
+      <li className={style.list}>
+        <Link to="/example" className={style.link}>ModuleCss Example</Link>
       </li>
+      
+      </div>
      <Routes>
        <Route path="/" element={<Home />} />
        <Route path="/users" element={<Users />} />
