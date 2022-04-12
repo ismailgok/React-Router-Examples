@@ -1,7 +1,6 @@
-import axios from 'axios'
+import styles from "./users.module.css"
 import {useEffect,useState} from 'react'
 import {Link} from "react-router-dom"
-
 
 function Users() {
     const [isLoading, setIsLoading] = useState(true)
@@ -18,7 +17,7 @@ function Users() {
 
   return (
     <div>
-        <h1>Users</h1>
+        <h1 className={styles.asd}>Users</h1>
         {
           isLoading && <div>Loading...</div>
         }
